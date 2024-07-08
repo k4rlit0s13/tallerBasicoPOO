@@ -17,8 +17,21 @@ export class perfilMago {
         this.edad=edad;
         this.sexo=sexo;
     }
-    saludar=()=>{
+    saludoDelMago=()=>{
         return(`Hola, mi nombre es ${this.nombre}, poseo una edad de ${this.edad} años y pertenezco al sexo ${this.sexo}`);
     }
 };
+
+export class estudio extends perfilMago {
+    constructor(nombre, edad, sexo, carrera) {
+        super(nombre, edad, sexo);
+        this.carrera = carrera;
+    }
+
+    queEstaEstudiando=()=>{
+        return `Estoy estudiando la carrera de ${this.carrera}`;
+    }
+};
+
+
 
