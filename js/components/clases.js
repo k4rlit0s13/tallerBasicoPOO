@@ -21,15 +21,17 @@ export class perfilMago {
         return(`Hola, mi nombre es ${this.nombre}, poseo una edad de ${this.edad} años y pertenezco al sexo ${this.sexo}`);
     }
     static esMayorDeEdad=(edad)=>{
-        if (edad>=100) {
+        if (edad>=40) {
             return `Soy mayor de edad contando con ${edad} años de edad, en años mágicos ser menor de edad es desde los 40 años`
+        }else{
+            return `No soy mayor de edad ya que cuento con menos de cuarenta años mágicos, poseo actualmente ${edad}`
         }
     }
 };
 
 export class estudio extends perfilMago {
-    constructor(nombre, edad, sexo, carrera) {
-        super(nombre, edad, sexo);
+    constructor(mago, carrera) {
+        super(mago.nombre, mago.edad, mago.sexo);
         this.carrera = carrera;
     }
 

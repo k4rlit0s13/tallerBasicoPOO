@@ -6,9 +6,9 @@ const mago = new perfilMago('Merlin', 150, 'masculino');
 const mostrarPerfilDelMago = document.querySelector('.perfil_mago');
 mostrarPerfilDelMago.innerHTML = mago.saludoDelMago();
 
-const materiaDelmago = new estudio('Magia sanadora');
 const mostrarCarrera = document.querySelector('.carrera_mago');
-mostrarCarrera.innerHTML = materiaDelmago.queEstaEstudiando();
+const carrera = new estudio(mago,'Magia sanadora');
+mostrarCarrera.innerHTML = carrera.queEstaEstudiando();
 
 const mostrarMayorDeEdad=document.querySelector('.mayor_de_edad_mago')
 mostrarMayorDeEdad.innerHTML=perfilMago.esMayorDeEdad(mago.edad);
