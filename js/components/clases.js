@@ -20,6 +20,11 @@ export class perfilMago {
     saludoDelMago=()=>{
         return(`Hola, mi nombre es ${this.nombre}, poseo una edad de ${this.edad} años y pertenezco al sexo ${this.sexo}`);
     }
+    static esMayorDeEdad=(edad)=>{
+        if (edad>=100) {
+            return `Soy mayor de edad contando con ${edad} años de edad, en años mágicos ser menor de edad es desde los 40 años`
+        }
+    }
 };
 
 export class estudio extends perfilMago {
@@ -33,5 +38,22 @@ export class estudio extends perfilMago {
     }
 };
 
+export class animal{
+    constructor(nombre,edad){
+        this.nombre=nombre;
+        this.edad=edad;
+    }
+    hacerSonido=()=>{
+        console.log(`${this.nombre} el perrito de Merlin hace un sonido`); 
+    }
+};
 
-
+export class perro extends animal{
+    constructor(nombre,edad,raza){
+        super(nombre,edad);
+        this.raza=raza;
+    }
+    moverLaCola=()=>{
+        console.log(`${this.nombre} está moviendo la cola`);
+    }
+};
