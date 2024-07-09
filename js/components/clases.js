@@ -57,3 +57,24 @@ export class perro extends animal{
         console.log(`${this.nombre} está moviendo la cola`);
     }
 };
+
+export class casa{
+    constructor(color,area){
+        this.color=color;
+        this.area=0;
+    }
+    areaEnCero=()=>{
+        return `Poseo unos pergaminos para crear un hogar, comenzaré con un area de valor a ${this.area}, la casa será de color ${this.color}`;
+    }
+};
+
+export class circulo extends casa{
+    constructor(color,area,radio){
+        super(color,area);
+        this.radio=radio;
+    }
+    calcularArea=()=>{
+        this.area=Math.PI*this.radio**2;
+        return this.area;
+    }
+}
