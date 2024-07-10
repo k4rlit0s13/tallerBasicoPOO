@@ -60,23 +60,35 @@ export class perro extends animal{
     }
 };
 
-export class casa{
-    constructor(color,area){
-        this.color=color;
-        this.area=0;
+export class Casa {
+    constructor(color) {
+        this.color = color;
+        this.area = 0;
     }
-    areaEnCero=()=>{
-        return `Poseo unos pergaminos para crear un hogar, comenzaré con un area de valor a ${this.area}, la casa será de color ${this.color}`;
+    calcularArea() {
+        return `Poseo unos pergaminos para crear un hogar, comenzaré con un área de valor ${this.area}, la casa será de color ${this.color}`;
     }
-};
+}
 
-export class circulo extends casa{
-    constructor(color,radio){
+export class Circulo extends Casa {
+    constructor(color, radio) {
         super(color);
-        this.radio=radio;
+        this.radio = radio;
     }
-    calcularArea=()=>{
-        this.area=Number(Math.PI*this.radio**2);
-        return `Haciendo cuentas concluyo que la casa podria quedar con un area de ${this.area} m a partir de ponerle un radio de ${this.radio} m`;
+    calcularArea() {
+        this.area = Number(Math.PI * this.radio ** 2);
+        return `Haciendo cuentas concluyo que el círculo podría tener un área de ${this.area.toFixed(2)} m² con un radio de ${this.radio} m y es de color ${this.color}`;
+    }
+}
+
+export class Rectangulo extends Casa {
+    constructor(color, largo, ancho) {
+        super(color);
+        this.largo = largo;
+        this.ancho = ancho;
+    }
+    calcularArea() {
+        this.area = this.largo * this.ancho;
+        return `El área del rectángulo de la casa es de ${this.area} m² y es de color ${this.color}`;
     }
 }

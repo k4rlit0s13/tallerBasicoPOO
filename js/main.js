@@ -1,5 +1,5 @@
 
-import { perfilMago, estudio, animal, perro, casa, circulo} from "./components/clases.js";
+import { perfilMago, estudio, animal, perro, Casa, Circulo, Rectangulo } from "./components/clases.js";
 
 const mago = new perfilMago('Merlin', 150, 'masculino');
 
@@ -17,9 +17,14 @@ const elAnimal= new perro('toby',8,'labrador');
 elAnimal.hacerSonido();
 elAnimal.moverLaCola();
 
-const laCasaDelMago=new circulo('marrón',20)
-const mostrarColorDeLaCasa=document.querySelector('.color_casa');
-mostrarColorDeLaCasa.innerHTML=laCasaDelMago.areaEnCero();
+const colorPaLaCasa = new Casa('marrón');
+const mostrarColorDeLaCasa = document.querySelector('.color_casa');
+mostrarColorDeLaCasa.innerHTML = colorPaLaCasa.calcularArea();
 
-const mostrarAreaDeLaCasa=document.querySelector('.area_casa')
-mostrarAreaDeLaCasa.innerHTML=laCasaDelMago.calcularArea();
+const areaCirculocasa = new Circulo('marrón', 20); // Se pasa el color 'marrón' correctamente
+const mostrarAreaCirculo = document.querySelector('.area_casa_circulo');
+mostrarAreaCirculo.innerHTML = areaCirculocasa.calcularArea();
+
+const areaRectanguloCasa = new Rectangulo('marrón', 5, 3); // Se pasa el color 'marrón' correctamente
+const mostrarAreaRectangulo = document.querySelector('.area_casa_rectangulo');
+mostrarAreaRectangulo.innerHTML = areaRectanguloCasa.calcularArea();
