@@ -71,12 +71,12 @@ export class casa{
 };
 
 export class circulo extends casa{
-    constructor(color,area,radio){
-        super(color,area);
+    constructor(color,radio){
+        super(color);
         this.radio=radio;
     }
     calcularArea=()=>{
-        this.area=Math.PI*this.radio**2;
-        return this.area;
+        this.area=Number(Math.PI*this.radio**2);
+        return `Haciendo cuentas concluyo que la casa podria quedar con un area de ${this.area} m a partir de ponerle un radio de ${this.radio} m`;
     }
 }

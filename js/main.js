@@ -1,5 +1,5 @@
 
-import { perfilMago, estudio, animal, perro, casa} from "./components/clases.js";
+import { perfilMago, estudio, animal, perro, casa, circulo} from "./components/clases.js";
 
 const mago = new perfilMago('Merlin', 150, 'masculino');
 
@@ -17,6 +17,9 @@ const elAnimal= new perro('toby',8,'labrador');
 elAnimal.hacerSonido();
 elAnimal.moverLaCola();
 
-const colorPaLaCasa=new casa('marrón')
-const mostrarColorDeLaCasa=document.querySelector('.area_casa');
-mostrarColorDeLaCasa.innerHTML=colorPaLaCasa.areaEnCero();
+const laCasaDelMago=new circulo('marrón',20)
+const mostrarColorDeLaCasa=document.querySelector('.color_casa');
+mostrarColorDeLaCasa.innerHTML=laCasaDelMago.areaEnCero();
+
+const mostrarAreaDeLaCasa=document.querySelector('.area_casa')
+mostrarAreaDeLaCasa.innerHTML=laCasaDelMago.calcularArea();
