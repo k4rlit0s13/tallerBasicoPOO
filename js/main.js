@@ -17,14 +17,17 @@ const elAnimal= new perro('toby',8,'labrador');
 elAnimal.hacerSonido();
 elAnimal.moverLaCola();
 
-const colorPaLaCasa = new Casa('marrón');
+
+const colorPredeterminado = 'marrón'; // Definir el color predeterminado
+
+const colorPaLaCasa = new Casa(colorPredeterminado);
 const mostrarColorDeLaCasa = document.querySelector('.color_casa');
 mostrarColorDeLaCasa.innerHTML = colorPaLaCasa.calcularArea();
 
-const areaCirculocasa = new Circulo('marrón', 20); // Se pasa el color 'marrón' correctamente
+const areaCirculocasa = new Circulo(colorPredeterminado, 20);
 const mostrarAreaCirculo = document.querySelector('.area_casa_circulo');
 mostrarAreaCirculo.innerHTML = areaCirculocasa.calcularArea();
 
-const areaRectanguloCasa = new Rectangulo('marrón', 5, 3); // Se pasa el color 'marrón' correctamente
+const areaRectanguloCasa = new Rectangulo(colorPredeterminado, 5, 3);
 const mostrarAreaRectangulo = document.querySelector('.area_casa_rectangulo');
 mostrarAreaRectangulo.innerHTML = areaRectanguloCasa.calcularArea();

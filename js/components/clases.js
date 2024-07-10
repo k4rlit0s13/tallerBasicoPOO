@@ -72,7 +72,7 @@ export class Casa {
 
 export class Circulo extends Casa {
     constructor(color, radio) {
-        super(color);
+        super(color); 
         this.radio = radio;
     }
     calcularArea() {
@@ -83,7 +83,7 @@ export class Circulo extends Casa {
 
 export class Rectangulo extends Casa {
     constructor(color, largo, ancho) {
-        super(color);
+        super(color); 
         this.largo = largo;
         this.ancho = ancho;
     }
