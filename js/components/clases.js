@@ -12,18 +12,18 @@
 //________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 export class perfilMago {
-    constructor(nombre,edad,sexo){
-        this.nombre=nombre;
-        this.edad=edad;
-        this.sexo=sexo;
+    constructor(nombre, edad, sexo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
     }
-    saludoDelMago=()=>{
-        return(`Hola, mi nombre es ${this.nombre}, poseo una edad de ${this.edad} años y pertenezco al sexo ${this.sexo}`);
+    saludoDelMago = () => {
+        return (`Hola, mi nombre es ${this.nombre}, poseo una edad de ${this.edad} años y pertenezco al sexo ${this.sexo}`);
     }
-    static esMayorDeEdad=(edad)=>{
-        if (edad>=40) {
+    static esMayorDeEdad = (edad) => {
+        if (edad >= 40) {
             return `Soy mayor de edad contando con ${edad} años de edad, en años mágicos ser menor de edad es desde los 40 años`
-        }else{
+        } else {
             return `No soy mayor de edad ya que cuento con menos de cuarenta años mágicos, poseo actualmente ${edad}`
         }
     }
@@ -35,27 +35,27 @@ export class estudio extends perfilMago {
         this.carrera = carrera;
     }
 
-    queEstaEstudiando=()=>{
+    queEstaEstudiando = () => {
         return `Estoy estudiando la carrera de ${this.carrera}`;
     }
 };
 
-export class animal{
-    constructor(nombre,edad){
-        this.nombre=nombre;
-        this.edad=edad;
+export class animal {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
     }
-    hacerSonido=()=>{
-        console.log(`${this.nombre} el perrito de Merlin hace un sonido`); 
+    hacerSonido = () => {
+        console.log(`${this.nombre} el perrito de Merlin hace un sonido`);
     }
 };
 
-export class perro extends animal{
-    constructor(nombre,edad,raza){
-        super(nombre,edad);
-        this.raza=raza;
+export class perro extends animal {
+    constructor(nombre, edad, raza) {
+        super(nombre, edad);
+        this.raza = raza;
     }
-    moverLaCola=()=>{
+    moverLaCola = () => {
         console.log(`${this.nombre} está moviendo la cola`);
     }
 };
@@ -72,7 +72,7 @@ export class Casa {
 
 export class Circulo extends Casa {
     constructor(color, radio) {
-        super(color); 
+        super(color);
         this.radio = radio;
     }
     calcularArea() {
@@ -83,7 +83,7 @@ export class Circulo extends Casa {
 
 export class Rectangulo extends Casa {
     constructor(color, largo, ancho) {
-        super(color); 
+        super(color);
         this.largo = largo;
         this.ancho = ancho;
     }
@@ -93,15 +93,18 @@ export class Rectangulo extends Casa {
     }
 };
 
-export class vehiculo{
-    constructor(marca,modelo,velocidad){
-        this.marca=marca;
-        this.modelo=modelo;
-        this.velocidad=velocidad;
+export class vehiculo {
+    constructor(marca, modelo, velocidad) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidad = velocidad;
     }
-    acelerar(){
-        const aceleracion=this.velocidad+10; 
+    acelerar() {
+        const aceleracion = this.velocidad + 10;
         return `Poseo un vehículo que me gusta ir a ${this.velocidad} km/h y cuando acelero le subo 10 km/h quedando una velocidad de ${aceleracion} km/h`
     }
+    static convertirKmHEnMph(velocidad) {
+        const millasPorHora= velocidad / 1.60934;
+        return `La velocidad de mi vehiculo, que va a ${velocidad} km/h en millas por hora seria equivalente a ${millasPorHora.toFixed(2)} Mph`
+    }
 };
-

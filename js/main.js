@@ -36,3 +36,7 @@ mostrarAreaRectangulo.innerHTML = areaRectanguloCasa.calcularArea();
 const vehiculoDelMago=new vehiculo('gorgorean','bronce',10);
 const mostrarVehiculoAceleracion=document.querySelector('.vehiculo_del_mago')
 mostrarVehiculoAceleracion.innerHTML=vehiculoDelMago.acelerar();
+
+const mostrarVehiculoMPH=document.querySelector('.velocidad_en_mph')
+const velocidadMPH=vehiculo.convertirKmHEnMph(vehiculoDelMago.velocidad);
+mostrarVehiculoMPH.innerHTML=velocidadMPH;
