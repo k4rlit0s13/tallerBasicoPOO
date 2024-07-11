@@ -42,9 +42,11 @@ const velocidadMPH = vehiculo.convertirKmHEnMph(vehiculoDelMago.velocidad);
 mostrarVehiculoMPH.innerHTML = velocidadMPH;
 
 const empleadoDeMerlin = new empleado('frodo', 30, 12);
+console.log(empleado.generarIdEmpleado());
 const mostrarEmpleadoDeMerlin = document.querySelector('.empleado_de_Merlin');
 mostrarEmpleadoDeMerlin.innerHTML = empleadoDeMerlin.calcularSalarioAnual();
 
 const gerenteMerlin = new gerente(empleadoDeMerlin, 'magia');
 const mostrargerenteMerlin = document.querySelector('.gerente');
 mostrargerenteMerlin.innerHTML = gerenteMerlin.calcularSalarioAnual();
+

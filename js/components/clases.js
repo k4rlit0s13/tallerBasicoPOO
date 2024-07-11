@@ -110,7 +110,11 @@ export class vehiculo {
 };
 
 export class empleado {
+
+    static contadorid = 1;
+
     constructor(nombre, edad, sueldo) {
+        this.id = empleado.generarIdEmpleado();
         this.nombre = nombre;
         this.edad = edad;
         this.sueldo = sueldo;
@@ -118,6 +122,11 @@ export class empleado {
     calcularSalarioAnual = () => {
         const sueldoAnual = this.sueldo * 12
         return `No me gusta trabajar solo, acompañado se vive mejor, por lo que tengo contratado un subordinado, su nombre es ${this.nombre}, posee ${this.edad} años y le pago ${this.sueldo} monedas de oro al mes, eso al año serían ${sueldoAnual} monedas de oro`
+    }
+    static generarIdEmpleado = () => {
+        const id = empleado.contadorid;
+        empleado.contadorid++;
+        console.log(id);
     }
 };
 
