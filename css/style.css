@@ -13,6 +13,8 @@ body{
     align-items: center;
 
     font-family:"Playwrite CZ", cursive;
+
+    background-image: url(../storage/img/old-wood-wall-texture-background-free-photo.jpg);
 }
 .caja_texto{
     /* background-color: red; */
@@ -24,9 +26,23 @@ body{
     padding: 30px;
 
     width: 80vw;
-    height: 80vh;
+    height: 85vh;
+    border-radius: 30px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3vh;
+
+    box-shadow: 5px 5px 60px black;
+    text-align: center;
 }
+.texto{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    
+}
+
