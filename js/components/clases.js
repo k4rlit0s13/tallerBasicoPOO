@@ -104,7 +104,30 @@ export class vehiculo {
         return `Poseo un vehículo que me gusta ir a ${this.velocidad} km/h y cuando acelero le subo 10 km/h quedando una velocidad de ${aceleracion} km/h`
     }
     static convertirKmHEnMph(velocidad) {
-        const millasPorHora= velocidad / 1.60934;
+        const millasPorHora = velocidad / 1.60934;
         return `La velocidad de mi vehiculo, que va a ${velocidad} km/h en millas por hora seria equivalente a ${millasPorHora.toFixed(2)} Mph`
+    }
+};
+
+export class empleado {
+    constructor(nombre, edad, sueldo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sueldo = sueldo;
+    }
+    calcularSalarioAnual = () => {
+        const sueldoAnual = this.sueldo * 12
+        return `No me gusta trabajar solo, acompañado se vive mejor, por lo que tengo contratado un subordinado, su nombre es ${this.nombre}, posee ${this.edad} años y le pago ${this.sueldo} monedas de oro al mes, eso al año serían ${sueldoAnual} monedas de oro`
+    }
+};
+
+export class gerente extends empleado {
+    constructor(empleado, departamento) {
+        super(empleado.nombre, empleado.edad, empleado.sueldo);
+        this.departamento = departamento
+    }
+    calcularSalarioAnual = () => {
+        const sueldoConBono = ((this.sueldo * 0.10) + this.sueldo) * 12;
+        return `yo en cambio gano un bono con mi sueldo, por la fabricación de hechizos que va por el departamento de ${this.departamento} quien me da este bono de 10%, dejandome un sueldo de ${sueldoConBono.toFixed(0)} monedas de oro al año`
     }
 };
