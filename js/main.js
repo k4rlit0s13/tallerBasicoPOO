@@ -1,5 +1,5 @@
 
-import { perfilMago, estudio, animal, perro, Casa, Circulo, Rectangulo } from "./components/clases.js";
+import { perfilMago, estudio, animal, perro, Casa, Circulo, Rectangulo, vehiculo } from "./components/clases.js";
 
 const mago = new perfilMago('Merlin', 150, 'masculino');
 
@@ -31,3 +31,8 @@ mostrarAreaCirculo.innerHTML = areaCirculocasa.calcularArea();
 const areaRectanguloCasa = new Rectangulo(colorPredeterminado, 5, 3);
 const mostrarAreaRectangulo = document.querySelector('.area_casa_rectangulo');
 mostrarAreaRectangulo.innerHTML = areaRectanguloCasa.calcularArea();
+
+
+const vehiculoDelMago=new vehiculo('gorgorean','bronce',10);
+const mostrarVehiculoAceleracion=document.querySelector('.vehiculo_del_mago')
+mostrarVehiculoAceleracion.innerHTML=vehiculoDelMago.acelerar();

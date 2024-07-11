@@ -68,7 +68,7 @@ export class Casa {
     calcularArea() {
         return `Poseo unos pergaminos para crear un hogar, comenzaré con un área de valor ${this.area}, la casa será de color ${this.color}`;
     }
-}
+};
 
 export class Circulo extends Casa {
     constructor(color, radio) {
@@ -79,7 +79,7 @@ export class Circulo extends Casa {
         this.area = Number(Math.PI * this.radio ** 2);
         return `Haciendo cuentas concluyo que el círculo podría tener un área de ${this.area.toFixed(2)} m² con un radio de ${this.radio} m y es de color ${this.color}`;
     }
-}
+};
 
 export class Rectangulo extends Casa {
     constructor(color, largo, ancho) {
@@ -91,4 +91,17 @@ export class Rectangulo extends Casa {
         this.area = this.largo * this.ancho;
         return `El área del rectángulo de la casa es de ${this.area} m² y es de color ${this.color}`;
     }
-}
+};
+
+export class vehiculo{
+    constructor(marca,modelo,velocidad){
+        this.marca=marca;
+        this.modelo=modelo;
+        this.velocidad=velocidad;
+    }
+    acelerar(){
+        const aceleracion=this.velocidad+10; 
+        return `Poseo un vehículo que me gusta ir a ${this.velocidad} km/h y cuando acelero le subo 10 km/h quedando una velocidad de ${aceleracion} km/h`
+    }
+};
+
